@@ -1,0 +1,16 @@
+class Solution:
+    def reverse(self, x: int) -> int:
+        myString = str(abs(x))
+        n = len(myString)
+        output = 0
+        i = 0
+        while i < n:
+            temp = (int(myString[i]) * (10 ** i))
+            output += temp
+            i += 1
+        print(output)
+        if x < 0:
+            output = -1 * output
+        if (output >= (-2 ** 31)) and (output < (2 ** 31)):
+            return output
+        return 0
