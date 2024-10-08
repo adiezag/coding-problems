@@ -1,0 +1,25 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        t = s.replace(' ', '')
+        p = t.lower()
+        output = ''
+        for i in range(len(p)):
+            if p[i].isalnum():
+                output += p[i]
+        i = 0
+        j = len(output) - 1
+        print(output)
+        if len(output) == 1:
+            return True
+        while i < j:
+            print(i, output[i])
+            print(j, output[j])
+            if output[i] != output[j]:
+                
+                return False
+            i += 1
+            j -= 1
+        return True
+        # print(output)
+        # return output
+        
